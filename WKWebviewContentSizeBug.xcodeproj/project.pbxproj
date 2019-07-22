@@ -12,9 +12,14 @@
 		C488D12D22E590470042909F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C488D12B22E590470042909F /* Main.storyboard */; };
 		C488D12F22E590480042909F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C488D12E22E590480042909F /* Assets.xcassets */; };
 		C488D13222E590480042909F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C488D13022E590480042909F /* LaunchScreen.storyboard */; };
+		C488D13A22E5907E0042909F /* Webkitview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488D13922E5907E0042909F /* Webkitview.swift */; };
+		C488D13C22E591D60042909F /* WebViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488D13B22E591D60042909F /* WebViewCell.swift */; };
+		C488D14122E5A52A0042909F /* ASWebViewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488D14022E5A52A0042909F /* ASWebViewNode.swift */; };
+		CC928057CC990F76D20B3357 /* libPods-WKWebviewContentSizeBug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9D34C0B08D5855E63FD215 /* libPods-WKWebviewContentSizeBug.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A34C6DFC22107135A719AB49 /* Pods-WKWebviewContentSizeBug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKWebviewContentSizeBug.release.xcconfig"; path = "Target Support Files/Pods-WKWebviewContentSizeBug/Pods-WKWebviewContentSizeBug.release.xcconfig"; sourceTree = "<group>"; };
 		C488D12422E590470042909F /* WKWebviewContentSizeBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKWebviewContentSizeBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C488D12722E590470042909F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C488D12922E590470042909F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,12 @@
 		C488D12E22E590480042909F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C488D13122E590480042909F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C488D13322E590480042909F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C488D13922E5907E0042909F /* Webkitview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webkitview.swift; sourceTree = "<group>"; };
+		C488D13B22E591D60042909F /* WebViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCell.swift; sourceTree = "<group>"; };
+		C488D13D22E5A49C0042909F /* WKWebviewContentSizeBug-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebviewContentSizeBug-Bridging-Header.h"; sourceTree = "<group>"; };
+		C488D14022E5A52A0042909F /* ASWebViewNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASWebViewNode.swift; sourceTree = "<group>"; };
+		CD9F9FCC6BA733D0A0346B42 /* Pods-WKWebviewContentSizeBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKWebviewContentSizeBug.debug.xcconfig"; path = "Target Support Files/Pods-WKWebviewContentSizeBug/Pods-WKWebviewContentSizeBug.debug.xcconfig"; sourceTree = "<group>"; };
+		CE9D34C0B08D5855E63FD215 /* libPods-WKWebviewContentSizeBug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WKWebviewContentSizeBug.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +40,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC928057CC990F76D20B3357 /* libPods-WKWebviewContentSizeBug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E220D7FF1DA5658BC7701E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D34C0B08D5855E63FD215 /* libPods-WKWebviewContentSizeBug.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C488D11B22E590470042909F = {
 			isa = PBXGroup;
 			children = (
 				C488D12622E590470042909F /* WKWebviewContentSizeBug */,
 				C488D12522E590470042909F /* Products */,
+				E3D60E58EC207F7744E31898 /* Pods */,
+				8E220D7FF1DA5658BC7701E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +78,25 @@
 			children = (
 				C488D12722E590470042909F /* AppDelegate.swift */,
 				C488D12922E590470042909F /* ViewController.swift */,
+				C488D14022E5A52A0042909F /* ASWebViewNode.swift */,
+				C488D13922E5907E0042909F /* Webkitview.swift */,
 				C488D12B22E590470042909F /* Main.storyboard */,
 				C488D12E22E590480042909F /* Assets.xcassets */,
 				C488D13022E590480042909F /* LaunchScreen.storyboard */,
 				C488D13322E590480042909F /* Info.plist */,
+				C488D13D22E5A49C0042909F /* WKWebviewContentSizeBug-Bridging-Header.h */,
+				C488D13B22E591D60042909F /* WebViewCell.swift */,
 			);
 			path = WKWebviewContentSizeBug;
+			sourceTree = "<group>";
+		};
+		E3D60E58EC207F7744E31898 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F9FCC6BA733D0A0346B42 /* Pods-WKWebviewContentSizeBug.debug.xcconfig */,
+				A34C6DFC22107135A719AB49 /* Pods-WKWebviewContentSizeBug.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +106,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C488D13622E590480042909F /* Build configuration list for PBXNativeTarget "WKWebviewContentSizeBug" */;
 			buildPhases = (
+				9E1FE4EC99E273A403C1D0F7 /* [CP] Check Pods Manifest.lock */,
 				C488D12022E590470042909F /* Sources */,
 				C488D12122E590470042909F /* Frameworks */,
 				C488D12222E590470042909F /* Resources */,
@@ -96,6 +132,7 @@
 				TargetAttributes = {
 					C488D12322E590470042909F = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -130,12 +167,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9E1FE4EC99E273A403C1D0F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WKWebviewContentSizeBug-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C488D12022E590470042909F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C488D13A22E5907E0042909F /* Webkitview.swift in Sources */,
+				C488D13C22E591D60042909F /* WebViewCell.swift in Sources */,
 				C488D12A22E590470042909F /* ViewController.swift in Sources */,
+				C488D14122E5A52A0042909F /* ASWebViewNode.swift in Sources */,
 				C488D12822E590470042909F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,16 +345,22 @@
 		};
 		C488D13722E590480042909F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD9F9FCC6BA733D0A0346B42 /* Pods-WKWebviewContentSizeBug.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ECF2XBHJ3;
 				INFOPLIST_FILE = WKWebviewContentSizeBug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.naumen.WKWebviewContentSizeBug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WKWebviewContentSizeBug/WKWebviewContentSizeBug-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,16 +368,21 @@
 		};
 		C488D13822E590480042909F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A34C6DFC22107135A719AB49 /* Pods-WKWebviewContentSizeBug.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ECF2XBHJ3;
 				INFOPLIST_FILE = WKWebviewContentSizeBug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.naumen.WKWebviewContentSizeBug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WKWebviewContentSizeBug/WKWebviewContentSizeBug-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
